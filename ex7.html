@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice 7</title>
+        <link rel="stylesheet" href="ex7.css">
+    </head>
+    <body>
+        <!--Bannière de dessus-->
+        <header>
+            <!--Texte de la bannière-->
+            <div class="bannière-haut">
+                <h1 class="titre-bannière"id="Haut">Ceci est la réponse au septième exercice.</h1>
+            </div>
+            <!--Boutons de navigations-->
+            <div class="navigation-bannière">
+                <div class="navigation-bannière-onglet-présent">Exercice 7</div>
+                <a href="ex1.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 1</button></a>
+                <a href="ex2.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 2</button></a>
+                <a href="ex3.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 3</button></a>
+                <a href="ex4.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 4</button></a>
+                <a href="ex5.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 5</button></a>
+                <a href="ex6.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 6</button></a>
+                <a href="ex7.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 7</button></a>
+                <a href="ex8.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 8</button></a>
+                <a href="ex9.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 9</button></a>
+            </div>
+            <!--Ombre-->
+            <div class="bannière-ombre"></div>
+        </header>
+        <!--Corp-->
+        <div class="corp">
+            <!--Résumé technique de la page-->
+            <div>
+                <!--Sous-titre-->
+                <div class="sous-titre-conteneur">
+                    <button class="bouton-déroulant" id="bouton1">▲</button> <!--Bouton déroulant-->
+                    <h3 style="margin: 0">Résumé de la page</h3>
+                </div>
+                <p id="texte1">
+                    Cette réponse inclut un titre d'onglet nommé "Exercice 7", une bannière de tête avec un titre de page, deux boutons pour avancer/reculer dans la réponse
+                    aux exercices, une bannière de bas de page, ainsi qu'un article Wikipedia sur la vie de Vincent Godbout. Le tout utilise un fichier CSS pour formater les éléments de la page,
+                    flex-box pour le positionnement des éléments et du Javascript pour ajouter de l'interactivité
+                </p>
+                <!--Script du bouton déroulant-->
+                <script>
+                    {
+                        let estOuvert = true;
+                        let texte1 = document.getElementById("texte1");
+                        let bouton = document.getElementById("bouton1");
+                        bouton.addEventListener("click",function(){
+                            if (estOuvert){
+                                texte1.style.display = "none";
+                                bouton.textContent="▼";
+                                estOuvert = false;
+                            }else{
+                                texte1.style.display = "initial";
+                                bouton.textContent="▲";
+                                estOuvert = true;
+                            }
+                        });
+                    }
+                </script>
+            </div>
+            <hr>
+            <!--Intro-->
+            <div>
+                <h1>Jackie Chan</h1>
+                <div>
+                    <div style="float: right; width: 250px; margin: 10px"><img src="JackieChan.jpg" alt="La tronche de Mr. Chan" style="max-width: 100%; max-height: 100%"></div>
+                    <div>
+                        <p>
+                            <b>Jackie Chann</b>, né <b>Chan Kong-sangn</b> le 7 avril 1954 à <a href="https://fr.wikipedia.org/wiki/Hong_Kong">Hong Kong</a>, est un acteur, chanteur, 
+                            cascadeur, scénariste, réalisateur et producteur chinois. Jackie Chan est spécialiste en arts martiaux et est reconnu mondialement pour ses films d'action. 
+                            Dans ses films, il est connu pour son style de combat, son sens de l'humour et ses cascades sensationnelles. Depuis les années 1970, il est apparu dans plus 
+                            d'une centaine de films. Il a reçu une étoile sur le <a href="https://fr.wikipedia.org/wiki/Hollywood_Walk_of_Fame">Hollywood Walk of Fame</a> et 
+                            <a href="https://fr.wikipedia.org/wiki/Avenue_des_Stars_(Hong_Kong)">l'Avenue des Stars</a> à <a href="https://fr.wikipedia.org/wiki/Hong_Kong">Hong Kong</a>. 
+                            En tant qu'icône culturelle, il a été mentionné dans diverses chansons pop, dessins animés et jeux vidéo. En plus d'être acteur, il s'est essayé à la chanson 
+                            dans les genres c<a href="https://fr.wikipedia.org/wiki/Cantopop">cantopop</a> et <a href="https://fr.wikipedia.org/wiki/Mandopop">mandopop</a>, notamment sur 
+                            le thème de ses films. Il a chanté lors de la cérémonie de clôture des <a href="https://fr.wikipedia.org/wiki/Jeux_olympiques_d%27%C3%A9t%C3%A9_de_2008">Jeux olympiques d'été de 2008</a> 
+                            au stade national de Pékin.
+                        </p>
+                        <p>
+                            Jackie Chan est aussi un homme d'affaires qui utilise son image dans différents domaines (ligne de vêtements, chaîne de cinémas, etc.) 
+                            et il possède sa société de production (<a href="https://fr.wikipedia.org/wiki/JCE_Movies_Limited">JCE Movies Limited</a>), qui produit notamment ses films depuis 
+                            2005. Il est un important philanthrope, en dédiant une partie des bénéfices qu'il tire de ses activités du show business à des œuvres caritatives. Son autobiographie, 
+                            <a href="https://fr.wikipedia.org/wiki/I_Am_Jackie_Chan">I Am Jackie Chan</a>, est sortie en 1998. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--Table des matières-->
+            <div>
+                <button class="bouton-déroulant" style="margin-bottom: 5px" id="bouton2">◀</button>
+                <div style="border: 2px solid #00000030; padding: 5px; width: max-content" id="TableDesMatières">
+                    <h3>Table des Matières</h3>
+                    <ol>
+                        <li>
+                            <a href="#1">Biographie</a>
+                            <ol>
+                                <li><a href="#1.1">Enfance</a></li>
+                                <li><a href="#1.2">Percée</a></li>
+                                <li><a href="#1.3">Succès</a></li>
+                                <li><a href="#1.4">Changement de style</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#2">Distinctions</a>
+                        </li>
+                        <li>
+                            <a href="#3">Entrepreneuriat et philanthropie</a>
+                            <ol>
+                                <li><a href="#3.1">Fondation Jackie Chan</a></li>
+                                <li><a href="#3.2">Fondation « Coeur du dragon »</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <script>
+                    {
+                        let estOuvert = true;
+                        let texte1 = document.getElementById("TableDesMatières");
+                        let bouton = document.getElementById("bouton2");
+                        bouton.addEventListener("click",function(){
+                            if (estOuvert){
+                                texte1.style.display = "none";
+                                bouton.textContent="▶";
+                                estOuvert = false;
+                            }else{
+                                texte1.style.display = "block";
+                                bouton.textContent="◀";
+                                estOuvert = true;
+                            }
+                        });
+                    }
+                </script>
+            </div>
+            <hr>
+            <!--Contenu-->
+            <div>
+                <!--Chapitre 1-->
+                <div>
+                    <!--Sous-titre-->
+                    <div class="sous-titre-conteneur">
+                        <button class="bouton-déroulant" id="bouton3">▲</button> <!--Bouton déroulant-->
+                        <h2 id="1">Biographie</h2>
+                    </div>
+                    <!--Corp-->
+                    <div id="texte2">
+                        <!--Chapitre 1.1-->
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton4">▲</button> <!--Bouton déroulant-->
+                                <h3 id="1.1">Enfance</h3>
+                            </div>
+                            <p id="texte3">
+                                Jackie Chan est né le 7 avril 1954 à Pic Victoria, dans l'ancienne colonie britannique de Hong Kong, sous le nom de Chan Kong-sang (qui signifie « né à Hong Kong ») de Charles (1914-2008) et 
+                                Lee-Lee Chan (1916-2002), des réfugiés de la guerre civile chinoise. Il est surnommé Paopao (en chinois, 炮炮 ; ce qui signifie littéralement « Boulet de canon ») à cause de son énergie 
+                                débordante étant enfant selon certaines sources1 ou à cause de son poids à la naissance selon d'autres2. Ses parents travaillant à l'ambassade de France à Hong Kong, Chan y passe une grande partie de sa jeunesse, notamment pour y étudier.
+                                Il va à l'école primaire de Nah-Hwa sur l'Île de Hong Kong, où il échoue lors de sa première année. Ses parents décident donc de l'en retirer. En 1960, son père émigre à Canberra en Australie, 
+                                pour travailler en tant que chef cuisinier à l'ambassade américaine. Ainsi, Chan est envoyé de 1961 à 1971 à la China Drama Academy, une école de l'opéra de Pékin dirigée par Yu Jim-yuen3. 
+                                Il s'y entraîne rigoureusement pendant dix ans, excellant dans les arts martiaux et l'acrobatie4. Finalement, il fait partie du groupe The Seven Little Fortunes de l'académie, représentant un 
+                                groupe des meilleurs étudiants. Il choisit alors le nom de scène de Yuen Lo en hommage à son maître. Dans le même temps, il devient un ami proche de Sammo Hung et Yuen Biao, dont le trinôme 
+                                est connu par la suite sous les appellations Les Trois Frères ou Les Trois Dragons5. Après avoir intégré l'industrie cinématographique, Jackie Chan et Sammo Hung ont l'occasion de s'entraîner 
+                                sous les ordres du grand maître Jim Pal Kim et de son supérieur Ji Han-Jae, et Chan atteint finalement le niveau de ceinture noire en hapkido6.
+                                À l'âge de huit ans, il apparait pour la première fois dans le film Big and Little Wong Tin Bar (1962), avec Li Li-hua jouant le rôle de sa mère. Chan apparait encore une fois avec Li l'année 
+                                suivante, dans The Love Eterne (1963)[réf. nécessaire] et obtient un petit rôle dans le film de King Hu en 1966, L'Hirondelle d'or. En 1971, après une apparition comme figurant dans un autre 
+                                film de King Hu, A Touch of Zen, Chan commence véritablement sa carrière cinématographique, en signant au départ avec la Great Earth Film Company du réalisateur Chu Mu7. À l'âge de dix-sept 
+                                ans, il travaille en tant que cascadeur dans les films de Bruce Lee, La Fureur de vaincre et Opération dragon sous le nom de Chan Yuen Lung (陳元龍)8. Il reçoit son premier rôle principal plus 
+                                tard la même année dans Le Petit Tigre de Canton, qui ne sort que dans quelques salles à Hong Kong en 19739 et participe en 1973 au tournage du premier film de John Woo (qui ne sortira qu'en 
+                                1975) en tant que directeur des combats10.Par suite de l'échec commercial de ses premières aventures cinématographiques et de la difficulté à trouver du travail en tant que cascadeur, Chan 
+                                joue en 1975 dans une comédie du Nouvel An chinois, All in the Family, de Chu Mu. C'est le premier et seul film où il apparaît nu dans une scène de sexe et dans lequel il ne participe à aucun combat ou cascade11.
+                                Chan rejoint ses parents à Canberra en 1976, où il assiste brièvement au cours de la Faculté Dickson et travaille en tant qu'ouvrier du bâtiment12. Un camarade constructeur prénommé Jack 
+                                prend Chan sous son aile, lui attribuant le surnom de Little Jack (Petit Jack). Plus tard, Chan reprend le surnom de Jackie, c'est ainsi que naquit le nom de scène de Jackie Chan qu'il porte 
+                                encore aujourd'hui13. Par ailleurs, vers la fin des années 1990, Chan change son nom chinois en Fong Si-lung (房仕龍), du fait que le nom de famille original de son père était Fong13. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte3");
+                                    let bouton = document.getElementById("bouton4");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton5">▲</button> <!--Bouton déroulant-->
+                                <h3 id="1.2">Percée</h3>
+                            </div>
+                            <p id="texte4">
+                                En 1976, Jackie Chan reçoit un télégramme de Willie Chan, un producteur de films à Hong Kong qui a été impressionné par le travail de Jackie en tant que cascadeur. Il lui offre un rôle 
+                                d'acteur dans un film dirigé par Lo Wei. Lo a en effet vu la performance de Chan dans le film de John Woo, Hand of Death (1976), et l'envisage pour prendre le rôle principal dans La 
+                                Nouvelle Fureur de vaincre, rôle précédemment interprété par Bruce Lee7. Il change son nom de scène pour s'appeler Sing Lung (成龍, également retranscrit Cheng Long14, signifiant 
+                                littéralement « Devenir le dragon ») pour mettre l'accent sur la ressemblance avec Bruce Lee, dont le nom de scène est Li Xiao long(李小龍, signifiant « Petit dragon »). Le film n'est 
+                                pas un succès car Chan n'est pas accoutumé au style d'arts martiaux de Lee. Malgré l'échec du film, Lo Wei continue de produire des films sur des thématiques similaires, parvenant à 
+                                réaliser quelques petits succès au box-office15. La première véritable percée de Chan se produit en 1978 avec le film Le Chinois se déchaîne, tourné alors qu'il est prêté à la Seasonal 
+                                Film Corporation pour un contrat de deux films16. Sous les ordres du réalisateur Yuen Woo-ping, Chan possède une liberté totale dans son travail de cascadeur. Le film établit le genre du 
+                                kung fu comique et constitue une bouffée d'air frais pour le public de Hong Kong17. Chan apparaît ensuite dans Le Maître chinois qui le propulse définitivement sur la vague du succès18.
+                                Dès le retour de Chan dans les studios de Lo Wei, ce dernier tente de reproduire l'approche comique du film avec notamment L'Irrésistible13. Il donne également la possibilité à Chan de 
+                                codiriger La Hyène intrépide avec Kenneth Tsang. Toutefois, lorsque Willie Chan quitte la société, il demande à Jackie Chan de réfléchir s'il veut ou pas rester avec Lo Wei. Au cours du 
+                                tournage de La Hyène intrépide 2, Chan rompt son contrat pour rejoindre la Golden Harvest. Furieux, Lo menace Willie Chan avec l'aide de triades chinoises, lui reprochant d'être à 
+                                l'origine du départ de sa vedette. Le conflit est finalement résolu avec l'intervention de l'acteur et réalisateur Jimmy Wang Yu, qui permet à Chan de rester avec la Golden Harvest16. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte4");
+                                    let bouton = document.getElementById("bouton5");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton6">▲</button> <!--Bouton déroulant-->
+                                <h3 id="1.3">Succès</h3>
+                            </div>
+                            <p id="texte5">
+                                Willie Chan devient l'agent et ami de Jackie, relations qu'ils conserveront pendant plus de trente ans. Il est à l'origine du lancement de sa carrière internationale, qui commence avec 
+                                de premières apparitions dans le cinéma américain dans les années 1980. Son premier film à Hollywood est Le Chinois en 1980. Chan joue ensuite un petit rôle en 1981 dans L'Équipée du 
+                                Cannonball, qui rapporte 100 millions de dollars dans le monde. Bien qu'il soit largement ignoré des spectateurs en faveur d'acteurs américains établis comme Burt Reynolds, Chan est 
+                                impressionné par les scènes coupées insérées dans le générique de fin, ce qui va l'inspirer à faire de même dans ses futurs films.
+                                Après l'échec commercial de Le Retour du Chinois en 1985, Chan arrête temporairement de travailler sur le marché américain pour se recentrer vers les films hongkongais15.
+                                De retour à Hong Kong, les films de Chan commencent à atteindre un plus large public en Asie orientale, avec quelques succès dans le lucratif marché japonais dont La Danse du lion en 
+                                1980 et Dragon Lord en 1982. La Danse du lion bat le précédent record du nombre d'entrées détenu par Bruce Lee et conforte Chan dans sa position de vedette du cinéma hongkongais. Avec 
+                                Dragon Lord, il commence à expérimenter des séquences plus élaborées de cascades19, dont une scène de combat sur une pyramide qui détient le record du nombre de prises pour une même 
+                                scène avec 2 900 tentatives et la scène finale où il effectue diverses cascades dont un salto arrière depuis un appartement pour retomber sur le sol en contrebas20.
+                                Chan produit de nombreux films d'action comiques avec ses camarades de l'école d'opéra, Sammo Hung et Yuen Biao. Les trois acolytes apparaissent pour la première fois à l'écran en 1983 
+                                dans Le Marin des mers de Chine, dans lequel les dangereuses cascades sont récompensées par le prix des meilleures chorégraphies au cours des Hong Kong Film Awards de 198521. Les deux 
+                                années suivantes, les Trois frères apparaissent dans Soif de justice et dans la trilogie originale des Lucky Stars (Le Gagnant, Le Flic de Hong Kong et Le Flic de Hong Kong 2)22,23.
+                                En 1985, Chan joue dans le premier film de la série des Police Story, une comédie d'action influencée par les États-Unis dans lequel il exécute de nombreuses cascades dangereuses. 
+                                Le film obtient le prix du meilleur film aux Hong Kong Film Awards en 198624. En 1987, Chan joue Asian Hawk, un personnage proche d'Indiana Jones dans le film Mister Dynamite. Ce film 
+                                constitue le plus gros succès domestique au box-office puisqu'il rapportera à Hong Kong plus de 35 millions de dollars25. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte5");
+                                    let bouton = document.getElementById("bouton6");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                        <hr>
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton7">▲</button> <!--Bouton déroulant-->
+                                <h3 id="1.4">Changement de style</h3>
+                            </div>
+                            <p id="texte6">
+                                Dans Le Royaume interdit, Chan collabore pour la première fois avec Jet Li. Le tournage se termine le 24 août 2007 et le film sort en salles en avril 2008. De nombreux effets spéciaux 
+                                sont utilisés pour concevoir le film39,40. Chan prête ensuite sa voix à maître Singe dans Kung Fu Panda aux côtés de Jack Black, Dustin Hoffman et Angelina Jolie41. De plus, il assiste 
+                                Anthony Szeto en qualité de conseiller pour le film Wushu sorti le 1er mai 2008. On y retrouve Sammo Hung et Wang Wenjie qui y jouent des rôles de père et fils42.
+                                En novembre 2007, Jackie commence le tournage de Shinjuku Incident, un rôle dramatique sans aucune scène d'art martial, sous la direction de Derek Yee. Il y interprète le rôle d'un 
+                                immigré chinois au Japon43. Le film sort le 2 avril 2009. Sur son blog, Chan exprime son désir de réaliser un film après Shinjuku Incident, chose qu'il n'a plus faite depuis plusieurs 
+                                années. Ce film sera la suite de la saga Armour of God, commencée par Mister Dynamite et Opération Condor, et s'intitule Chinese Zodiac. Le tournage débute en 2009 et le film sort le 9 
+                                décembre 2012 en salles44. En parallèle, fin octobre 2009, Chan commence le tournage du film Kung Fu Nanny au Nouveau-Mexique45. Il y interprète un agent secret dont la couverture tombe 
+                                après avoir voulu garder les enfants de sa petite amie. Dans Little Big Soldier, dont l'action se déroule en Chine pendant la période des Royaumes combattants, Chan joue le rôle d'un vieux 
+                                fantassin rescapé d'une bataille qui capture un général ennemi blessé (Leehom Wang) afin de le ramener dans la capitale de son royaume.
+                                Le 22 juin 2009, il quitte Los Angeles pour commencer le tournage à Pékin de Karaté Kid, un remake du film original46. Le film sort aux États-Unis le 11 juin 2010 et constitue le premier 
+                                film américain dramatique pour Chan. Il y interprète monsieur Han, un maître de kung-fu devenu homme d'entretien qui apprend au personnage joué par Jaden Smith le kung-fu, afin qu'il 
+                                puisse se défendre à l'école. La fin du film devait proposer un duel final entre le personnage de Mr Han et le « méchant », avant d'être retiré au montage afin de laisser la victoire f
+                                inale à Jaden Smith. La scène fut donc déplacée dans les scènes coupées. Dans son film suivant, Shaolin, Chan joue le cuisinier du temple plutôt qu'un rôle principal.
+                                Son centième film, 1911 sort le 26 septembre 2011. Il y est coréalisateur, producteur exécutif et vedette principale47. Le film sort le 14 octobre aux États-Unis48, mais ne sort pas sur 
+                                les écrans francophones.
+                                Chan remporte le prix du meilleur botteur de culs aux Nickelodeon's Kids' Choice Awards en 2011 pour Karaté Kid49. Durant le Festival de Cannes 2012, Chan annonce sa retraite pour les 
+                                films d'action, prétextant qu'il est devenu trop âgé pour ce genre de films. Il précise par la suite qu'il ne va pas complètement se retirer des films d'actions, mais qu'il va effectuer 
+                                moins de cascades et prendre plus soin de son corps50.
+                                Le 20 septembre 2012, sort à Pékin, CZ12 (Chinese Zodiac), Jackie Chan y reprend son rôle d'aventurier à la recherche de statues du zodiaque dérobées par les troupes britanniques et 
+                                françaises lors du sac du Palais d'été en 1860. Le film tourné en France (Paris, château de Chantilly, château de Courances, château de Corbeil Cerf), Lituanie, Chine, Hong-Kong, 
+                                Taiwan et Australie totalise plus de 160 millions de dollars américains lors de sa sortie en Chine. Sa diffusion en France est prévue pour 2014.
+                                Le magazine Forbes révèle le 1er juillet que Jackie Chan a gagné 50 millions de dollars entre juin 2014 et juin 2015. Il est donc le deuxième acteur le mieux payé du monde sur cette 
+                                période juste derrière Robert Downey Jr..
+                                Le 5 juin 2015, On annonce que Jackie Chan va tourner un film d'action thriller intitulé The Foreigner réalisé par Martin Campbell à qui l'on doit également Casino Royale51. Tiré du 
+                                roman de Stephen Leather : The Chinaman. Jackie Chan veut montrer une autre facette de son jeu d'acteur. Par rapport au choix de tourner un tel film à Hollywood, Jackie Chan a déclaré : 
+                                « En fait, ces dernières années, j’ai eu beaucoup de proposition pour tourner dans des blockbusters Hollywoodien, mais je ne veux plus jouer au « maître chinois » ou au « policier de 
+                                Hong-Kong », je n’ai plus envie de me répéter. Avec The Foreigner c’était l’occasion de jouer un rôle que je n’avais jamais fait. Alors j’ai voulu essayer ».52 Le tournage a 
+                                officiellement commencé en janvier 2016 à Londres. Cependant, en février 2016, le tournage d'une scène a créé un vent de panique passager à Londres. En effet, l'équipe a fait exploser 
+                                un bus à impériale sur le Lambeth Bridge pour les besoins d'une séquence sans prendre le soin de communiquer de manière plus intensive afin de prévenir toute la population. Seules 
+                                quelques affiches avaient été placardées, suscitant la colère des londoniens, notamment en raison du contexte actuel de menaces terroristes53. Le budget du film est de 35 millions de 
+                                dollars. Il est sorti le 30 septembre en Chine sous le nom de « 英倫對決 » (Yīng lún duì jué en chinois simplifié) où il fera une chanson pour la promotion du film : « 普通人 » 
+                                (Pǔ tōng rén)54 avec l'actrice 刘涛 (Liú tāo ou Keyi Lan en français) qui joue la meilleure amie de Jackie Chan dans ce film.
+                                Fin juillet 2023 sort le film Project X-traction sur la plateforme Netflix. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte6");
+                                    let bouton = document.getElementById("bouton7");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <!--Script du bouton déroulant-->
+                    <script>
+                        {
+                            let estOuvert = true;
+                            let texte1 = document.getElementById("texte2");
+                            let bouton = document.getElementById("bouton3");
+                            bouton.addEventListener("click",function(){
+                                if (estOuvert){
+                                    texte1.style.display = "none";
+                                    bouton.textContent="▼";
+                                    estOuvert = false;
+                                }else{
+                                    texte1.style.display = "initial";
+                                    bouton.textContent="▲";
+                                    estOuvert = true;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+                <hr>
+                <!--Chapitre 2-->
+                <div>
+                    <div class="sous-titre-conteneur">
+                        <button class="bouton-déroulant" id="bouton8">▲</button>
+                        <h2 id="2">Distinctions</h2>
+                    </div>
+                    <ul id="texte7">
+                        <li>Hong Kong Film Awards 1989 : meilleur film pour Rouge</li>
+                        <li>Golden Horse Film Festival 1992 : meilleur acteur dans un film d'action pour Police Story 3 (Ging chat goo si 3: Chiu kup ging chat)</li>
+                        <li>Asia-Pacific Film Festival 1993 : prix pour l'ensemble de sa carrière</li>
+                        <li>Golden Horse Film Festival 1993 : meilleur acteur dans un drame d'action Crime Story (Cung on zo)</li>
+                        <li>MTV Movie Awards 1995 : prix pour l'ensemble de sa carrière</li>
+                        <li>Hong Kong Film Awards 1996 : meilleures scènes d'action chorégraphiées dans une comédie d'action pour Jackie Chan dans le Bronx, partagé avec Stanley Tong</li>
+                        <li>Festival de Fantasia 1997 : meilleur film asiatique pour Combats de maître, partagé avec Chia-Liang Liu</li>
+                        <li>Cinequest San Jose Film Festival 1998 : Maverick Tribute Award</li>
+                        <li>Blockbuster Entertainment Awards 1999 : duo favori à l'écran dans un film d'action pour Rush Hour, partagé avec Chris Tucker</li>
+                        <li>Hollywood Film Awards 1999 : acteur de l'année</li>
+                        <li>Hong Kong Film Awards 1999 : meilleures scènes d'action chorégraphiées dans une comédie d'action pour Who Am I? (Ngo si seoi)</li>
+                        <li>MTV Movie Awards 1999 : meilleur duo à l'écran dans un film d'action pour Rush Hour, partagé avec Chris Tucker</li>
+                        <li>Awards of the International Indian Film Academy 2000 : prix spécial du Jury</li>
+                        <li>Festival des films du monde de Montréal 2001 : Grand Prix spécial des Amériques</li>
+                        <li>American Choreography Awards 2002 : prix pour l'Innovation</li>
+                        <li>Kids' Choice Awards 2002 : héros préféré de film d'action pour Rush Hour 2</li>
+                        <li>MTV Movie Awards 2002 : meilleur combat dans un film d'action pour Rush Hour 2, partagé avec Chris Tucker</li>
+                        <li>World Stunt Awards 2002 : Taurus Honorary Award</li>
+                        <li>Kids' Choice Awards 2003 : meilleure bagarre dans une comédie d'action pour Le Smoking</li>
+                        <li>Asia-Pacific Film Festival 2005 : prix spécial du Jury</li>
+                        <li>Festival international du film de Shanghai 2005 : prix pour sa contribution exceptionnelle au monde du cinéma chinois</li>
+                        <li>Golden Phoenix Awards 2005 : prix pour sa contribution exceptionnelle</li>
+                        <li>Golden Rooster Awards 2005 : meilleur acteur dans un drame d'action pour New Police Story</li>
+                        <li>Hong Kong Film Awards 2005 : prix pour l'ensemble de sa carrière</li>
+                        <li>Kids' Choice Awards 2011 : meilleure bagarre dans un drame d'action pour Karaté Kid</li>
+                        <li>People's Choice Awards 2011 : star préféré de film d'action</li>
+                        <li>Golden Horse Film Festival 2013 : meilleure chorégraphie de scène d'action dans un film d'action pour Chinese Zodiac, partagé avec Jun He</li>
+                        <li>Hong Kong Film Awards 2013 : meilleure chorégraphie de scène d'action pour Chinese Zodiac, partagé avec Bradley James Allan et Jun He</li>
+                    </ul>
+                    <script>
+                        {
+                            let estOuvert = true;
+                            let texte1 = document.getElementById("texte7");
+                            let bouton = document.getElementById("bouton8");
+                            bouton.addEventListener("click",function(){
+                                if (estOuvert){
+                                    texte1.style.display = "none";
+                                    bouton.textContent="▼";
+                                    estOuvert = false;
+                                }else{
+                                    texte1.style.display = "block";
+                                    bouton.textContent="▲";
+                                    estOuvert = true;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+                <hr>
+                <!--Chapitre 3-->
+                <div>
+                    <div class="sous-titre-conteneur">
+                        <button class="bouton-déroulant" id="bouton9">▲</button>
+                        <h2 id="3">Entrepreneuriat et philanthropie</h2>
+                    </div>
+                    <div id="texte8">
+                        <!--Chapitre 3.1-->
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton10">▲</button>
+                                <h3 id="3.1">Fondation Jackie Chan</h3>
+                            </div>
+                            <p id="texte9">
+                                Fondée en 1988, la Fondation caritative Jackie Chan offre une scolarité et une aide active aux jeunes de Hong Kong. Au fil des années, elle a élargi son champ d'action pour inclure les 
+                        services médicaux, l'aide aux victimes de catastrophes naturelles ou aux malades, et les projets où les principaux bénéficiaires sont des habitants ou des organismes de Hong Kong. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte9");
+                                    let bouton = document.getElementById("bouton10");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                        <hr>
+                        <!--Chapitre 3.2-->
+                        <div>
+                            <div class="sous-titre-conteneur">
+                                <button class="bouton-déroulant" id="bouton11">▲</button>
+                                <h3 id="3.2">Fondation « Coeur du dragon »</h3>
+                            </div>
+                            <p id="texte10">
+                                La fondation Cœur du Dragon est fondée en 2005 pour subvenir aux besoins minimum des enfants et des personnes âgées dans les campagnes reculées de Chine. Depuis ses débuts, elle a construit 
+                                une douzaine d'écoles, fourni des livres, financements et uniformes, et récolté des millions de dollars pour donner la possibilité d'une éducation minimale pour les enfants les plus pauvres. 
+                                De plus, elle utilise une partie des dons pour offrir aux personnes âgées des vêtements chauds, des fauteuils roulants et d'autres objets de première nécessité. Jackie Chan voyage souvent 
+                                vers les campagnes reculées pour assister aux travaux ou aux ouvertures d'écoles et pour apporter son soutien et ses encouragements. 
+                            </p>
+                            <script>
+                                {
+                                    let estOuvert = true;
+                                    let texte1 = document.getElementById("texte10");
+                                    let bouton = document.getElementById("bouton11");
+                                    bouton.addEventListener("click",function(){
+                                        if (estOuvert){
+                                            texte1.style.display = "none";
+                                            bouton.textContent="▼";
+                                            estOuvert = false;
+                                        }else{
+                                            texte1.style.display = "initial";
+                                            bouton.textContent="▲";
+                                            estOuvert = true;
+                                        }
+                                    });
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <script>
+                        {
+                            let estOuvert = true;
+                            let texte1 = document.getElementById("texte8");
+                            let bouton = document.getElementById("bouton9");
+                            bouton.addEventListener("click",function(){
+                                if (estOuvert){
+                                    texte1.style.display = "none";
+                                    bouton.textContent="▼";
+                                    estOuvert = false;
+                                }else{
+                                    texte1.style.display = "initial";
+                                    bouton.textContent="▲";
+                                    estOuvert = true;
+                                }
+                            });
+                        }
+                    </script>
+                </div>
+                <hr>
+            </div>
+            <!--Boutons de navigation-->
+            <div style="display: flex; flex-direction: row;">
+                <a href="ex6.html" style="margin-left: 5px; margin-right: 5px"><button> Réponse au sixième exercice.</button></a>
+                <a href="ex8.html" style="margin-left: 5px; margin-right: 5px"><button> Revenir au huitième exercice.</button></a>
+            </div>
+            <hr>
+        </div>
+        <footer>
+            <p>Ceci est la bannière de bas de page.</p>
+            <a href="#Haut"><p>Haut</p></a>
+        </footer> 
+    </body>
+</html>

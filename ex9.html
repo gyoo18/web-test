@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice 9 : Formulaire</title>
+        <link rel="stylesheet" href="ex7.css">
+        <link rel="stylesheet" href="ex9.css">
+        <script src="ex8.js"></script>
+        <script src="ex9.js" defer></script>
+    </head>
+    <body>
+        <!--Bannière de dessus-->
+        <header>
+            <!--Texte de la bannière-->
+            <div class="bannière-haut">
+                <h1 class="titre-bannière"id="Haut">Ceci est un formulaire.</h1>
+            </div>
+            <!--Boutons de navigations-->
+            <div class="navigation-bannière">
+                <div class="navigation-bannière-onglet-présent">Exercice 9</div>
+                <a href="ex1.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 1</button></a>
+                <a href="ex2.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 2</button></a>
+                <a href="ex3.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 3</button></a>
+                <a href="ex4.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 4</button></a>
+                <a href="ex5.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 5</button></a>
+                <a href="ex6.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 6</button></a>
+                <a href="ex7.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 7</button></a>
+                <a href="ex8.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 8</button></a>
+                <a href="ex9.html" style="width: 100%"><button class="navigation-bannière-bouton">Exercice 9</button></a>
+            </div>
+            <!--Ombre-->
+            <div class="bannière-ombre"></div>
+        </header>
+        <!--Corp-->
+        <div>
+            <!--Résumé technique de la page-->
+            <div>
+                <!--Sous-titre-->
+                <div class="sous-titre-conteneur">
+                    <button class="bouton-déroulant" onclick="rouler('texte1',this)">▲</button> <!--Bouton déroulant-->
+                    <h3 style="margin: 0">Résumé de la page</h3>
+                </div>
+                <p id="texte1">
+                    Cette page présente un petit formulaire.
+                </p>
+                <!--Script du bouton déroulant-->
+            </div>
+            <hr>
+            <div style="width: 100%; margin: 0; margin-bottom: 5px; padding: 0; display: flex; justify-content: center;">
+                <form id="Formulaire">
+                    <div style="display: grid; column-gap: 10px; grid-template-columns: 50% 50%;">
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Prénom :</label>
+                            <input class="entrée-texte-boîte" type="text" id="prénom" placeholder="prénom" onblur="surFloutageNom(this)" required>
+                        </div>
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Nom :</label>
+                            <input class="entrée-texte-boîte" type="text" id="nom" placeholder="nom" onblur="surFloutageNom(this)">
+                        </div>
+                    </div>
+                    <div style="display: grid; column-gap: 10px; grid-template-columns: 50% 50%;">
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Courriel :</label>
+                            <input class="entrée-texte-boîte" type="email" id="courriel" placeholder="courriel@domaine.ca" onblur="surFloutageCourriel(this)" required>
+                        </div>
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Confirmation Courriel :</label>
+                            <input class="entrée-texte-boîte" type="email" id="courriel" placeholder="courriel@domaine.ca" onblur="surFloutageCourriel(this)" required>
+                        </div>
+                    </div>
+                    <div class="entrée-texte-conteneur">
+                        <label class="entrée-texte-texte">N° de Téléphone :</label>
+                        <input class="entrée-texte-boîte" type="tel" id="N° Téléphone" placeholder="(123) 456 7890" onblur="surFloutageTel(this)">
+                    </div>
+                    <div style="display: grid; column-gap: 10px; grid-template-columns: 50% 50%;">
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Mot de passe :</label>
+                            <input class="entrée-texte-boîte" type="text" id="mot de passe" placeholder="124 n'est pas un mot de passe" required>
+                        </div>
+                        <div class="entrée-texte-conteneur">
+                            <label class="entrée-texte-texte">Confirmation de mot de passe :</label>
+                            <input class="entrée-texte-boîte" type="text" id="Confirmation mot de passe" placeholder="motdepasse n'est pas un mot de passe" required>
+                        </div>
+                    </div>                    
+                    <div class="entrée-texte-conteneur">
+                        <label class="entrée-texte-texte">Date de naissance :</label>
+                        <input type="date" id="age" class="entrée-date">
+                        <label style="margin-left: 5px">Âge :</label>
+                        <label id="age-résultat" style="margin-left: 5px;">0</label>
+                    </div>
+                    <hr>
+                    <div style="display: flex; justify-content: center;">
+                        <input type="submit" value="Soumettre" class="bouton-soumettre">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>Ceci est la bannière de bas de page.</p>
+            <a href="#Haut"><p>Haut</p></a>
+        </footer> 
+    </body>
+</html>

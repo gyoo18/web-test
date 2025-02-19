@@ -1,0 +1,96 @@
+form{
+    width: 75%;
+    margin : 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.entrée-texte-conteneur{
+    margin : 3px;
+    width: 100%;
+    display : flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.entrée-texte-texte{
+    margin-right : 5px;
+    width: max-content;
+}
+.entrée-texte-boîte{
+    border-width: 2px;
+    border-color: rgb(87, 153, 197);
+    border-style: solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    background-color: #daf2fd;
+    background-image: linear-gradient(#bfd1e2,#e3f1f8);
+    box-shadow: inset 0 0 5px #aec2d4;
+
+    display: flex;
+    flex: 1 1 auto;
+}
+.entrée-texte-boîte:invalid{
+    border-width: 2px;
+    border-color: rgb(209, 62, 43);
+    border-style: solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    background-color: #f8e3e3;
+    background-image: linear-gradient(#e2bfbf,#f8e3e3);
+    box-shadow: inset 0 0 5px #d1a9a9;
+
+    display: flex;
+    flex: 1 1 auto;
+}
+.entrée-date{
+    border-width: 2px;
+    border-color: rgb(87, 153, 197);
+    border-style: solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    background-color: #daf2fd;
+    background-image: linear-gradient(#bfd1e2,#e3f1f8);
+    box-shadow: inset 0 0 5px #aec2d4;
+}
+.bouton-soumettre{
+    border-width: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    padding:10px;
+    font-size:16px;
+
+    background-image: linear-gradient(#7dbde7,#5d8fd1);
+    box-shadow: 0 3px 3px grey;
+}
+.bouton-soumettre:hover{
+    border-width: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    padding:10px;
+    font-size:16px;
+
+    background-image: linear-gradient(#5d8fd1,#7dbde7);
+    box-shadow: none;
+
+    cursor: pointer;
+}

@@ -1,0 +1,72 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(#EEEEEE,#AAAAAA);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+.bannière-haut{
+    margin: 0;
+    background-image: linear-gradient(#68aae0,#3b6ace);
+    padding: 70px;
+}
+footer{
+    margin: 0;
+    float: bottom;
+    background-image: linear-gradient(#68aae0,#3b6ace);
+    padding: 30px;
+    width: 100%;
+}
+.bannière-ombre{
+    margin: 0;
+    padding-top: 20px;
+    background-image: linear-gradient(#00000070,#00000000)
+}
+.titre-bannière{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-image: none;
+}
+.corp{
+    height: 100%;
+    padding: 10px;
+    background-image:none;
+}
+hr{
+    background-color: rgba(0,0,0,0.15);
+    color: rgba(0,0,0,0.15);
+    height: 2px;
+    border: 0;
+}
+button{
+    background-image: linear-gradient(#85bae5,#599ad8);
+    border: none;
+    padding: 10px;
+    width: 150px;
+    border-radius:7px;
+    cursor: pointer;
+}
+button:hover{
+    background-image: linear-gradient(#5f97c5,#599ad8);
+    border: none;
+    padding: 10px;
+    width: 150px;
+    border-radius:7px;
+    cursor: pointer;
+}
