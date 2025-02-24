@@ -6,13 +6,38 @@
         <link rel="stylesheet" href="ex7.css">
         <link rel="stylesheet" href="ex9.css">
         <script src="ex8.js"></script>
+        <style>
+            table{
+                border: 1px solid black;
+                border-collapse: collapse;
+                font-size: 1.5em;
+            }
+            th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                background-color: lightgrey;
+            }
+            tr, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            tr:nth-child(even){
+                background-color: lightgrey;
+            }
+            tr:nth-child(odd){
+                background-color: white;
+            }
+            tr:hover{
+                background-color: rgb(192, 224, 243);
+            }
+        </style>
     </head>
     <body>
         <!--Bannière de dessus-->
         <header>
             <!--Texte de la bannière-->
             <div class="bannière-haut">
-                <h1 class="titre-bannière"id="Haut">Ceci est un formulaire.</h1>
+                <h1 class="titre-bannière"id="Haut">Exercices JavaScript.</h1>
             </div>
             <!--Boutons de navigations-->
             <div class="navigation-bannière">
@@ -46,18 +71,97 @@
                 <!--Script du bouton déroulant-->
             </div>
             <hr>
-            <div style="width: 100%; margin: 0; margin-bottom: 5px; padding: 0; display: flex; justify-content: center;">
-                <label id="a"></label>
-                <label id="b"></label>
-                <label id="c"></label>
+            <div style="width: 100%; margin: 0; margin-bottom: 5px; padding: 0; display: flex; flex-direction: column; justify-content: center;">
+                <p id="a">a</p>
+                <p id="b">b</p>
+                <p id="c">c</p>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="number" id="na" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    <input type="number" id="nb" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    <button onclick="additionner()" style="font-size: 1.5em; padding: 0.3em; width: 3em;">=</button>
+                    <p id="nr" style="font-size: 2em;"></p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="number" id="n" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    <button onclick="signe()" style="font-size: 1.5em; padding: 0.3em; width: 3em;">=</button>
+                    <p id="rsigne" style="font-size: 2em;"></p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <input type="number" placeholder="n" title="Le nombre de base de la table de multiplication" id="TMN" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    <input type="number" placeholder="Nombre de lignes" title="Nombre de lignes" id="nLignes" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    <button onclick="tableMultiplication()" style="font-size: 1.5em; padding: 0.3em; width: 3em;">=</button>
+                    <table id="TM"></table>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div>
+                        <input type="number" id="tC" placeholder="T °C" title="T °C" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                        <input type="number" id="tF" placeholder="T °F" title="T °F" style="min-width: 2em; max-width: 5em; width: 100%; font-size: 1.5em; border-radius: 10px;">
+                    </div>
+                    <button onclick="température()" style="font-size: 1.5em; padding: 0.3em; width: 3em;"><-></button>
+                </div>
+
                 <script>
                     nom = "Jackie Chan";
                     âge = 33;
                     aime_javascript = true;
 
-                    document.getElementById("a").value = "Je suis "+nom;
-                    document.getElementById("b").value = "J'ai "+âge+" ans";
-                    document.getElementById("c").value = "J'aime JavaScript! = "+aime_javascript;
+                    document.getElementById("a").innerText = "Je suis "+nom;
+                    document.getElementById("b").innerText = "J'ai "+âge+" ans";
+                    document.getElementById("c").innerText = "J'aime JavaScript! = "+aime_javascript;
+
+                    function additionner(){
+                        a = Number(document.getElementById("na").value);
+                        b = Number(document.getElementById("nb").value);
+                        r = document.getElementById("nr");
+                        if (b===0){
+                            r.innerText = "Addition : "+(a+b)+"\nSoustraction : "+(a-b)+"\nDivision : ERREUR, division par 0."+"\nMultiplication : "+(a*b);
+                        }else{
+                            r.innerText = "Addition : "+(a+b)+"\nSoustraction : "+(a-b)+"\nDivision : "+(a/b)+"\nMultiplication : "+(a*b);
+                        }
+                    }
+
+                    function signe(){
+                        a = Number(document.getElementById("n").value);
+                        r = document.getElementById("rsigne");
+                        if(a > 0){
+                            r.innerText = "Nombre positif";
+                        } else if(a < 0){
+                            r.innerText = "Nombre négatif";
+                        }else{
+                            r.innerText = "0 est positif et négatif";
+                        }
+                    }
+
+                    function tableMultiplication(){
+                        n = Number(document.getElementById("TMN").value);
+                        nLignes = Number(document.getElementById("nLignes").value);
+                        tableau = document.getElementById("TM");
+                        tableau.innerHTML = "";
+
+                        for (i = 1; i <= nLignes; i++){
+                            r = n*i;
+                            ligne = tableau.insertRow(i-1);
+                            ligne.insertCell(0).innerText = i;
+                            ligne.insertCell(1).innerText = r;
+                        }
+
+                        enTête = tableau.createTHead().insertRow(0);
+                        enTête.innerHTML = "<th>i</th><th>i*"+n+"</th>";
+                    }
+
+                    function température(){
+                        tC = document.getElementById("tC");
+                        tF = document.getElementById("tF");
+
+                        if (tC.value === ""){
+                            tC.value = (Number(tF.value)-32)/1.8;
+                        }else{
+                            tF.value = Number(tC.value)*1.8+32;
+                        }
+                    }
                 </script>
             </div>
         </div>
